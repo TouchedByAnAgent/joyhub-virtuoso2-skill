@@ -1,0 +1,4 @@
+interface:
+  display_name: "Joyhub Virtuoso2"
+  short_description: "Control the validated J-Virtuoso2 BLE device safely."
+  default_prompt: "Use this skill to control or document the validated J-Virtuoso2 / Virtuoso 2 Joyhub-compatible BLE device, including safe all-off behavior and command sequencing."
