@@ -22,14 +22,15 @@ Use this skill for the validated device:
 ## Workflow
 
 1. Confirm the operator can observe the device and stop immediately if needed.
-2. Prefer an existing minimal controller if present. If creating one, use Python `bleak` and keep the CLI small: `scan`, `connect`, `send`, `preset`, `presets`, and `all-off`.
-3. Subscribe to notifications when possible, then write hex commands to `ffa1`.
-4. Every actuator path must support automatic cleanup. Send wave-off and suction-off in `finally` blocks.
+2. Use the bundled script first: `scripts/joyhub_virtuoso2.py`.
+3. For live control, install `bleak`, subscribe to notifications when possible, then write hex commands to `ffa1`.
+4. Every actuator path must support automatic cleanup. The bundled script enables cleanup by default for `send` and `preset`.
 5. For all-actuator combined control, send suction/squeeze first, then wave control. The reverse order stayed in `P0` and did not reliably enable suction on the tested unit.
 
 ## Commands
 
 See [references/protocol.md](references/protocol.md) for command generation details.
+See [references/prompts.md](references/prompts.md) for reusable agent prompts.
 
 Core commands:
 
@@ -52,11 +53,11 @@ all actuators max: a00d000003ff then a003ffff0000aa
 
 ## Verification
 
-For any implementation created from this skill, verify at minimum:
+Verify this skill and bundled code with:
 
 ```bash
-python -m unittest discover -v
-python -m <package_or_cli> preset all-actuators-max --dry-run
+python scripts/joyhub_virtuoso2.py preset all-actuators-max --dry-run
+python scripts/joyhub_virtuoso2.py presets
 ```
 
 The dry run must print suction first, wave second, then cleanup.
