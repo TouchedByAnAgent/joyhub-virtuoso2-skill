@@ -3,6 +3,7 @@
 Agent skill and bundled control script for the validated Joyhub-compatible device:
 
 - Product link: https://amzn.to/4tpeo5E
+- Disclosure: This is a paid affiliate link. As an Amazon Associate I earn from qualifying purchases.
 - Device: `J-Virtuoso2 / Virtuoso 2`
 - Validated BLE address: `FF:25:07:11:DD:36`
 - `productCode`: `3131`
