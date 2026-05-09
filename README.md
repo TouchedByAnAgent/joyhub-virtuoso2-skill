@@ -1,4 +1,4 @@
-# Joyhub Virtuoso2 Codex Skill
+# Joyhub Virtuoso2 Agent Skill
 
 Agent skill and bundled control script for the validated Joyhub-compatible device:
 
