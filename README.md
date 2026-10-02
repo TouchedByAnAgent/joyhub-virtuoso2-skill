@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/banner.jpg" alt="Glowing amber and magenta line-art of a robot hand reaching toward a puzzle-piece skill card and a generic gadget connected by radio ripples." width="100%"></p>
+
 # Joyhub Virtuoso2 Agent Skill
 
 Agent skill and bundled control script for the validated Joyhub-compatible device:
